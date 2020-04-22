@@ -1,4 +1,4 @@
-# M
+# Motanica
 
 ## mod2-final
 
@@ -10,7 +10,7 @@ strainapi.evanbusse.com/API_KEY
 ### Problem statement 
 (which problem I am trying to solve)
 
-**Mamota** is an App that outputs educational Cannabis information depending on *user selection*. It allows the user to search by different parameters to obtain a strain's name, flavor, effects (whether said effects are positive or negative), etc. 
+**Motanica** is an App that outputs educational Cannabis information depending on *user selection*. It allows the user to search by different parameters to obtain a strain's name, flavor, effects (whether said effects are positive or negative), etc. 
 
 ### Target users 
 The target users are individuals who are interested in the potential benefits of Cannabis, and want a more customizable visual approach to gaining insight. 
@@ -43,4 +43,4 @@ App.js -> Verify Age-> Navbar.js -> Sativa -> Hybrid -> Indica -> Home Page.js -
 
 
 ![Quick Wireframe for Momota]
-(images/momota-wireframe.pdf)
+(https://github.com/devcaceres1/mod2-final/blob/master/images/momota-wireframe.pdf)
