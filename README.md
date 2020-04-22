@@ -43,4 +43,4 @@ App.js -> Verify Age-> Navbar.js -> Sativa -> Hybrid -> Indica -> Home Page.js -
 
 
 ![Quick Wireframe for Momota]
-(images/MotanicaWireframe.png)
+(https://github.com/devcaceres1/mod2-final/blob/master/images/MotanicaWireframe.png)
