@@ -1,0 +1,26 @@
+.App{
+    text-align: center;
+    align-items: center;
+}
+
+.Canna{
+    width: 60vh;
+    height: 65vw;
+}
+
+.navigator{
+    display: flex;
+    border: 3px solid black;
+}
+
+.logo{
+    border: 3px solid green;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.strain-nav{
+        display: flex;
+        
+}
