@@ -1,11 +1,11 @@
 import React from "react";
 import '../App.css'
 
-class IndicaSearch extends React.Component{
+class Descriptions extends React.Component{
     render(){
         return(
             <div>
-                 <h1> Indica Search </h1>
+                 <h1> Descriptions </h1>
             </div>
         )
     }
@@ -13,5 +13,4 @@ class IndicaSearch extends React.Component{
 
 
 
-
-export default IndicaSearch;
+export default Descriptions;

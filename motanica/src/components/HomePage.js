@@ -1,8 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import IMG_6367 from '../images/IMG_6367.jpg';
 import '../App.css';
 
-const HomePage = ()=> {
+const HomePage = () => {
         return (
              <div>
                <h1 className = 'display-5 text-uppercase py-5 text-center'> Botanica </h1> 
