@@ -42,4 +42,4 @@ App.js -> Verify Age-> Navbar.js -> Sativa -> Hybrid -> Indica -> Home Page.js -
 1.  Indica Search
 
 
-![Quick Wireframe for Motanica](images/MotanicaWireframe.png)
+![Quick Wireframe for Motanica](https://github.com/devcaceres1/mod2-final/blob/master/motanica/src/images/MotanicaWireframe.png)
