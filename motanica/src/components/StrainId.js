@@ -34,7 +34,7 @@ class StrainId extends React.Component{
                 </form>
 
             <div>
-            {this.state.search ? (<SearchResults id={this.state.answers} />) : "Answers"}
+            {this.state.search ? (<SearchResults id = {this.state.answers} />) : "Data"}
             </div>
             </div>
         )
