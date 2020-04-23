@@ -11,24 +11,24 @@ function Routes(){
             <nav>
                 <ul>
                     <li>
-                        <Link to='/HomePage'>Home Page</Link> 
+                        <Link to='/'>Home Page</Link> 
                     </li>
                     <li>
-                        <Link to ='/SativaSearch'> Sativa</Link>
+                        <Link to ='/sativaSearch'> Sativa</Link>
                     </li>
                     <li>
-                        <Link to='/Indica'> Indica </Link>
+                        <Link to='/indicaSearch'> Indica </Link>
                     </li>
                     <li>
-                        <Link to='/Hybrid'> Hybrid </Link>
+                        <Link to='/hybridSearch'> Hybrid </Link>
                     </li>
                 </ul>
             </nav>
             <Switch>
-                <Route exact path="/HomePage" component= {HomePage}></Route> 
-                <Route exact path="/" component= {SativaSearch}></Route>
-                <Route exact path="/" component= {IndicaSearch}></Route>
-                <Route exact path="/" component= {HybridSearch} ></Route>
+                <Route exact path="/" component= {HomePage}></Route> 
+                <Route exact path="/sativaSearch" component= {SativaSearch}></Route>
+                <Route exact path="/indicaSearch" component= {IndicaSearch}></Route>
+                <Route exact path="/hybridSearch" component= {HybridSearch} ></Route>
             </Switch>
         </Router>
     )
