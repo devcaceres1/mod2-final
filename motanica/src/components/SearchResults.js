@@ -15,11 +15,13 @@
 
     async effects(){
         const hiddenApi = process.env.REACT_APP_MOTANICA_API_KEY;
-        // console.log(hiddenApi)
         try{
-        let getEffect = await axios.get(`https://strainapi.evanbusse.com/${hiddenApi}/strains/data/effects/10`)
+        let getEffect = await axios.get(`https://strainapi.evanbusse.com/${hiddenApi}/strains/data/effects${this.state.answers}`)
         this.setState({effects : getEffect.data})
-    console.log(getEffect.data.negative)
+
+        console.log(getEffect.data.negative)
+        console.log(getEffect.data)
+
         }
         catch(error) {
             console.log(error)
@@ -47,12 +49,11 @@
         // }
     render(){
             return (
-            <div className = "container-fluid">
+            <div className = "container">
                 
-                <p className ="col-sm-1"> {this.state.effects.positive}</p>
+                <p className ="col-xl-2"> {this.state.effects.positive}</p>
                 <p> {this.state.effects.negative} </p>
-                <p> {this.state.raceId} </p> 
-                <p> {this.state.race} </p>
+                <p> {this.state.race} </p> 
 
             {console.log(this.state.effects.positive)}
             {console.log(this.state.effects.negative)}

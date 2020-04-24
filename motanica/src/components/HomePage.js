@@ -5,6 +5,7 @@ import '../App.css';
 const HomePage = () => {
         return (
              <div>
+               
                <h1 className = 'display-5 text-uppercase py-5 text-center text-white'> Botanica <h3>
                   <small className="text-muted"> A Cannabis App! </small>
   </h3>

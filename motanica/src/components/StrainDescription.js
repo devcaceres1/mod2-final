@@ -1,9 +1,8 @@
 import React from 'react';
-import SearchResults from './SearchResults';
 import '../App.css';
 import axios from "axios";
 
-class StrainId extends React.Component{
+class StrainDescription extends React.Component{
     constructor(props){
     super(props)
         this.state = {
@@ -12,15 +11,17 @@ class StrainId extends React.Component{
             race : this.props.id,
         } 
         this.submitButton = this.submitButton.bind(this);
-        this.getInfo = this.getInfo.bind(this);
-        this.raceId =this.raceId.bind(this);
+        this.getData = this.getData.bind(this);
+        this.allInfo =this.allInfo.bind(this);
     }
-    async raceId(){
+    async allInfo(){
         try{
-        const getData = await axios.get(`https://strainapi.evanbusse.com/H0WNPak/strains/search/race/${this.state.answers}`)               
-        console.log(getData.data);
+        const hiddenApi = process.env.REACT_APP_MOTANICA_API_KEY;
+        const allData = await axios.get(`https://strainapi.evanbusse.com/${hiddenApi}/strains/search/${this.state.answers}`)     
+
+        console.log(allData.data);
         this.setState({
-            info: getData.data,
+            info: allData.data,
         })
     }
         catch(error){
@@ -29,7 +30,7 @@ class StrainId extends React.Component{
     
     }
 
-  getInfo(event){
+  getData(event){
       event.preventDefault();
       this.setState({answers : event.target.value});
   }
@@ -44,8 +45,8 @@ class StrainId extends React.Component{
         return(
             <div>
                  <form onSubmit={this.submitButton}>
-                    <input type="text" value = {this.state.answers} onChange = {this.getInfo}/>
-                    <input type="submit" onClick = {this.raceId}/>
+                    <input type="text" value = {this.state.answers} onChange = {this.getData}/>
+                    <input type="submit" onClick = {this.allInfo}/>
                 </form>
 
                 <div> {this.state.info.map((response,index) => {
@@ -54,6 +55,7 @@ class StrainId extends React.Component{
                     
                     <p>Name :{response.name}</p>
                     <p>Race :{response.race}</p>
+                    <p>Effect : {response.effect}</p>
                     </div>
                 }   
                 )}</div>
@@ -65,6 +67,4 @@ class StrainId extends React.Component{
 
 };
 
-
-
-export default StrainId
+export default StrainDescription;

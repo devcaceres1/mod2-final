@@ -2,7 +2,7 @@ import React from 'react';
 import SearchResults from './SearchResults';
 import '../App.css'
 
-class StrainId extends React.Component{
+class StrainEffects extends React.Component{
     constructor(props){
     super(props)
         this.state = {
@@ -28,6 +28,11 @@ class StrainId extends React.Component{
     render(){
         return(
             <div>
+                {/* <div>  */}
+                    {/* <img src={Logo} alt = “Cannabis” /> */}
+                    {/* <img src={Logo} alt=“website logo” /> */}
+                    {/* <img src={Logo} alt=“website logo” /> */}
+                {/* </div> */}
                  <form onSubmit={this.submitButton}>
 
                     <input className = "text-field"type="text" value = {this.state.answers} onChange = {this.getInfo}/>
@@ -47,4 +52,4 @@ class StrainId extends React.Component{
 
 };
 
-export default StrainId;
+export default StrainEffects;
