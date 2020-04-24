@@ -34,11 +34,12 @@ class StrainId extends React.Component{
                 </form>
 
             <div>
-            {this.state.search ? (<SearchResults id = {this.state.answers} />) : "Data"}
+            {this.state.search ? (<SearchResults id = {this.state.answers} />) : "Answers"}
             </div>
             </div>
         )
-        
+        console.log(this.submitButton())
+        console.log(this.state.answers.sativa)
     }
 
 };

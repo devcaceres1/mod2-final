@@ -1,6 +1,7 @@
 .App{
     text-align: center;
     align-items: center;
+    background-color: rgb(8, 147, 8);
 }
 
 .Canna{
@@ -8,19 +9,16 @@
     height: 500px;
 }
 
-.navigator{
-    display: flex;
-    border: 3px solid black;
+.wrapper{
 }
 
-.logo{
-    border: 3px solid green;
+.mota-nav{
     display: flex;
-    align-items: center;
-    margin-left: 5px;
+    list-style: none ;
+    justify-content: space-evenly;
+    border: 4px black solid;
+    font-size: 20px;
 }
 
-.strain-nav{
-        display: flex;
-        
-}
+
+

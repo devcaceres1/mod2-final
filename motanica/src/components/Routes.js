@@ -4,12 +4,13 @@ import HomePage from './HomePage'
 import StrainId from './StrainId';
 import Descriptions from './Descriptions';
 import Effects from './Effects';
+import '../App.css';
 
 function Routes(){
     return (
         <Router>
-            <nav>
-                <ul>
+            <nav className = "wrapper">
+                <ul className = "mota-nav">
                     <li>
                         <Link to='/'>Home Page</Link> 
                     </li>
@@ -35,3 +36,6 @@ function Routes(){
 }
 
 export default Routes;
+
+
+
