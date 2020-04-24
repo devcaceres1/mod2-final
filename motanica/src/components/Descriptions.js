@@ -1,79 +1,70 @@
-    import React from "react";
-    import '../App.css'
-    import axios from "axios"
-    import SearchResults from "./SearchResults";
+import React from 'react';
+import SearchResults from './SearchResults';
+import '../App.css';
+import axios from "axios";
 
-    class Descriptions extends React.Component{
-        constructor(props){
-        super(props);
+class StrainId extends React.Component{
+    constructor(props){
+    super(props)
         this.state = {
-            couchlock : "",
-            search :false
-        }
+            info : [],
+            search : false,
+            race : this.props.id,
+        } 
         this.submitButton = this.submitButton.bind(this);
-        this.IndaInfo = this.IndaInfo.bind(this);
-        }
-
-    async indaCall(){
-        const hiddenApi = process.env.REACT_APP_MOTANICA_API_KEY;
-        console.log(hiddenApi)
+        this.getInfo = this.getInfo.bind(this);
+        this.raceId =this.raceId.bind(this);
+    }
+    async raceId(){
         try{
-        let getData = await axios.get(`https://strainapi.evanbusse.com/${hiddenApi}/strains/search/race/indica`)
-        
-
-        this.setState({couchlock: getData.data})
-        console.log(this.state.couchlock);
-        console.log(getData);
+        const getData = await axios.get(`https://strainapi.evanbusse.com/H0WNPak/strains/search/race/${this.state.answers}`)               
+        console.log(getData.data);
+        this.setState({
+            info: getData.data,
+        })
     }
         catch(error){
             console.log(error);
         }
-    }
-    componentDidMount(){
-        this.indaCall();
-    }
-    nullInda() {
-        if (this.state.couchlock === null || this.state.couchlock === undefined){
-            return "Not found";
-        } else {
-             let indaStats = this.state.couchlock.map((response,index)=>{
-            return (
-        <div id = {index}>
-        <h3 id = {index} > {response.name} </h3>  
-        <h3 id = {index} > {response.race} </h3>  
-         </div> )}); 
-            return indaStats;
-        }
+    
     }
 
-                IndaInfo(e){
-                    e.preventDefault();
-                    this.setState({couchlock : e.target.value})
-                    console.log(e)
-                }
-            
-                submitButton(e){
-                e.preventDefault();
-                this.setState({search : true});
-                }    
-                render(){
-                    return(
-                        <div>
-                            <form onSubmit={this.submitButton}>
-                                <input type="text" value = {this.state.couchlock} onChange = {this.IndaInfo}/>
-                                <input type="submit" />
-                            </form>
-                        <div>
-                        {/* <SearchResults/> */}
-                        {this.state.search ? (<SearchResults id = {this.state.answers} />) : "Answers"}                        
-                        {this.nullInda()}
+  getInfo(event){
+      event.preventDefault();
+      this.setState({answers : event.target.value});
+  }
 
-                        </div>
-                        </div>
-                    )
-                    console.log(this.nullInda())
-                }
-            
-            };
+  submitButton(e){
+    e.preventDefault();
+    this.setState({search : true});
+    console.log(this.state.answers);
+  }
+      
+    render(){
+        return(
+            <div>
+                 <form onSubmit={this.submitButton}>
+                    <input type="text" value = {this.state.answers} onChange = {this.getInfo}/>
+                    <input type="submit" onClick = {this.raceId}/>
+                </form>
 
-    export default Descriptions;
+                <div> {this.state.info.map((response,index) => {
+                
+                return <div key={index}>
+                    
+                    <p>Name :{response.name}</p>
+                    <p>Race :{response.race}</p>
+                    </div>
+                }   
+                )}</div>
+                
+            </div>
+        )
+        
+    }
+
+};
+
+
+
+export default StrainId

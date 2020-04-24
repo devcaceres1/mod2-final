@@ -2,6 +2,8 @@
     text-align: center;
     align-items: center;
     background-color: rgb(8, 147, 8);
+    width: 100vw;
+    height:100vh;
 }
 
 .Canna{
@@ -18,6 +20,15 @@
     justify-content: space-evenly;
     border: 4px black solid;
     font-size: 20px;
+}
+
+.text-field{
+   margin-right: 15px;
+}
+
+.text-button{   
+    border-radius: 50%;
+    outline-style: none;
 }
 
 

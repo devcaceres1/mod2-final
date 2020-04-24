@@ -21,29 +21,30 @@ class StrainId extends React.Component{
   }
   
 
-  submitButton(e){
+    submitButton(e){
     e.preventDefault();
     this.setState({search : true});
-  }    
+    }    
     render(){
         return(
             <div>
                  <form onSubmit={this.submitButton}>
-                    <input type="text" value = {this.state.answers} onChange = {this.getInfo}/>
-                    <input type="submit" />
+
+                    <input className = "text-field"type="text" value = {this.state.answers} onChange = {this.getInfo}/>
+                    <input className = "text-button" type="submit" />
+
                 </form>
 
             <div>
+
             {this.state.search ? (<SearchResults id = {this.state.answers} />) : "Answers"}
+
             </div>
+
             </div>
         )
-        console.log(this.submitButton())
-        console.log(this.state.answers.sativa)
-    }
+        }
 
 };
-
-
 
 export default StrainId;

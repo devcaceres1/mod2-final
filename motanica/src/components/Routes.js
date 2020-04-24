@@ -15,13 +15,13 @@ function Routes(){
                         <Link to='/'>Home Page</Link> 
                     </li>
                     <li>
-                        <Link to ='/strainId'> Strain Id</Link>
+                        <Link to ='/strainId'> Strain Effects </Link>
                     </li>
                     <li>
-                        <Link to='/descriptions'> Description </Link>
+                        <Link className = "text-white" to='/descriptions'> Strain Race </Link>
                     </li>
                     <li>
-                        <Link to='/effects'> Effects </Link>
+                        <Link to='/effects'> Strain Description </Link>
                     </li>
                 </ul>
             </nav>
