@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
 import axios from "axios";
+import sativaplant from '../images/sativaplant.jpg';
+import indicaplant from '../images/indicaplant.jpg'
 
 class StrainRace extends React.Component{
     constructor(props){
@@ -10,9 +12,12 @@ class StrainRace extends React.Component{
             search : false,
             race : this.props.id,
         } 
+
+        this.clearButton = this.clearButton.cing(this);
         this.submitButton = this.submitButton.bind(this);
         this.getInfo = this.getInfo.bind(this);
         this.raceId =this.raceId.bind(this);
+
     }
     async raceId(){
         try{
@@ -37,23 +42,34 @@ class StrainRace extends React.Component{
   submitButton(e){
     e.preventDefault();
     this.setState({search : true});
-    console.log(this.state.answers);
   }
-      
+   
+  clearButton(){
+    this.setState({getId: "", search:false})
+  }
+
     render(){
         return(
-            <div>
+            <div className = "race-wrapper">
+                <div className = "race-upper-wrapper"> 
+                <img className= 'Canna' src ={indicaplant} alt = "Indica Plant"/> 
+
                  <form onSubmit={this.submitButton}>
-                    <input type="text" value = {this.state.answers} onChange = {this.getInfo}/>
-                    <input type="submit" onClick = {this.raceId}/>
+                    <input className = "text-field" type="text" value = {this.state.answers} onChange = {this.getInfo}/>
+                    <input className = "text-button" type="submit" onClick = {this.raceId}/>
+                    <button className = "text-button" type = "button" onClick={this.clearButton}>Clear</button>
                 </form>
+
+                <img className= 'Canna' src ={sativaplant} alt = "Sativa Plant"/>
+
+                </div>
 
                 <div> {this.state.info.map((response,index) => {
                 
-                return <div className = "race-box" key={index}>
+                return <div className = "strain-race-results" key={index}>
                     
-                    <p>Name :{response.name}</p>
-                    <p>Race :{response.race}</p>
+                    <p> Strain Name :{response.name} </p>
+                    <p> Strain ID :{response.id}</p>
                     </div>
                 }   
                 )}</div>
