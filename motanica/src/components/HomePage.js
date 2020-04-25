@@ -1,12 +1,14 @@
 import React from "react";
 import IMG_6367 from '../images/IMG_6367.jpg';
 import '../App.css';
+import strong from '../images/strong.png'
 
 const HomePage = () => {
         return (
              <div className = "homepage-wrapper">
-               <h1 className = 'display-2 text-uppercase py-5 text-center text-white'> Motanica  
-               <h3> <small className="text-muted"> A Cannabis App! </small> </h3> </h1> 
+               <h1 className = 'display-2 text-uppercase py-5 text-center text-white'> <img className = "weedies0" src={strong} alt= "Flex Feeling" /> Motanica <img className = "weedies0" src={strong} alt= "Flex Feeling" />
+
+               <h3 className="text-muted"> A Cannabis App! </h3> </h1> 
 
       <img className= 'Canna' src ={IMG_6367} alt = "Cannabis Plant"/> 
 
