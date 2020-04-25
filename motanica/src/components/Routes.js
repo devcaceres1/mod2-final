@@ -12,16 +12,16 @@ function Routes(){
             <nav className = "wrapper">
                 <ul className = "mota-nav">
                     <li>
-                        <Link to='/'>Home Page</Link> 
+                        <Link className = "text-white"  to='/'>Home Page</Link> 
                     </li>
                     <li>
-                        <Link to ='/strain-effects'> Strain Effects </Link>
+                        <Link className = "text-white" to ='/strain-effects'> Strain Effects </Link>
                     </li>
                     <li>
                         <Link className = "text-white" to='/strain-race'> Strain Race </Link>
                     </li>
                     <li>
-                        <Link to='/strain-description'> Strain Description </Link>
+                        <Link className = "text-white"  to='/strain-description'> Strain Description </Link>
                     </li>
                 </ul>
             </nav>
