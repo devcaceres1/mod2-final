@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import axios from "axios";
-import sativaplant from '../images/sativaplant.jpg';
-import indicaplant from '../images/indicaplant.jpg';
+import sativaplant from '../images/sativaplant.png';
+import indicaplant from '../images/indicaplant.png';
 import mini2 from '../images/yinyang.png';
 
 class StrainRace extends React.Component{

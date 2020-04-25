@@ -15,10 +15,10 @@ function Routes(){
                         <Link className = "text-white"  to='/'>Home Page</Link> 
                     </li>
                     <li>
-                        <Link className = "text-white" to ='/strain-effects'> Strain Effects </Link>
-                    </li>
-                    <li>
                         <Link className = "text-white" to='/strain-race'> Strain Race </Link>
+                    </li>
+                    <li> 
+                         <Link className = "text-white" to ='/strain-effects'> Strain Effects </Link>
                     </li>
                     <li>
                         <Link className = "text-white"  to='/strain-description'> Strain Description </Link>
@@ -27,8 +27,8 @@ function Routes(){
             </nav>
             <Switch>
                 <Route exact path="/" component= {HomePage}></Route> 
-                <Route exact path="/strain-effects" component= {StrainEffects}></Route>
                 <Route exact path="/strain-race" component= {StrainRace}></Route>
+                <Route exact path="/strain-effects" component= {StrainEffects}></Route>
                 <Route exact path="/strain-description" component= {StrainDescription} ></Route>
             </Switch>
         </Router>
