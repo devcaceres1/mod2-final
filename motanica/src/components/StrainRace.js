@@ -2,7 +2,8 @@ import React from 'react';
 import '../App.css';
 import axios from "axios";
 import sativaplant from '../images/sativaplant.jpg';
-import indicaplant from '../images/indicaplant.jpg'
+import indicaplant from '../images/indicaplant.jpg';
+import mini2 from '../images/yinyang.png';
 
 class StrainRace extends React.Component{
     constructor(props){
@@ -13,7 +14,7 @@ class StrainRace extends React.Component{
             race : this.props.id,
         } 
 
-        this.clearButton = this.clearButton.cing(this);
+        this.clearButton = this.clearButton.bind(this);
         this.submitButton = this.submitButton.bind(this);
         this.getInfo = this.getInfo.bind(this);
         this.raceId =this.raceId.bind(this);
@@ -51,16 +52,20 @@ class StrainRace extends React.Component{
     render(){
         return(
             <div className = "race-wrapper">
-                <div className = "race-upper-wrapper"> 
-                <img className= 'Canna' src ={indicaplant} alt = "Indica Plant"/> 
-
-                 <form onSubmit={this.submitButton}>
-                    <input className = "text-field" type="text" value = {this.state.answers} onChange = {this.getInfo}/>
+            
+                <div> 
+                    <div className = "race-upper-wrapper">
+                    <img className= 'Canna' src ={indicaplant} alt = "Indica Plant"/>
+                    <img className = "mini-weedies2" src={mini2} alt= "Yin Feeling" />
+                    <img className= 'Canna' src ={sativaplant} alt = "Sativa Plant"/>
+                    </div>
+                    <form  className = "form-race" onSubmit={this.submitButton}>
+                    <h3> <small className="text-muted"> Enter either : Indica, Hybrid, or Sativa </small> </h3>
+                    <input className = "text-field3" type="text" value = {this.state.answers} onChange = {this.getInfo} />
                     <input className = "text-button" type="submit" onClick = {this.raceId}/>
                     <button className = "text-button" type = "button" onClick={this.clearButton}>Clear</button>
-                </form>
 
-                <img className= 'Canna' src ={sativaplant} alt = "Sativa Plant"/>
+                </form>
 
                 </div>
 

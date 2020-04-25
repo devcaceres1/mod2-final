@@ -12,10 +12,10 @@
 }
 
 nav{
-    background:url('./images/IMG_6359.jpg');
-    background-size: 1450px 2000px;
+    background:url('./images/Untitled\ collage.png');
+    background-size: 1440px 150px;
     background-repeat: no-repeat;
-    padding: 2%;
+    padding: 4%;
 }
 
 .mota-nav{
@@ -27,7 +27,7 @@ nav{
 
 .text-field{
    margin-left: -10px;
-   margin-top: 40vh;
+   margin-top: 10vh;
 }
 
 .text-button{   
@@ -37,31 +37,31 @@ nav{
 }
 
 .race-upper-wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .indica-hp{
     color: purple;
 }
 
-.homepage-wrapper{
-}
-
-
-.strain-effects-wrapper{
-    /* display: flex; */
+.weedies-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .strain-race-results{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    color: black;
+    color: white;
     font-size: 20px;
 }
 
+.effects-form{
+    margin-bottom: 50vh;
+}
 
-
+.h4-race{
+    margin-top: 40%;
+}
